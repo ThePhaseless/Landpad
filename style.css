@@ -4,6 +4,7 @@
   --icon-size: min(7vh);
   --text-size: clamp(15px, 2.5vh, 3vw);
   --primary-color: #f090a1;
+  --secondary-color: #ffeb99;
   --background-color: #e9f5db;
   --on-background-color: #cfe1b9;
   --container-border-color: #b5c99a;
@@ -28,14 +29,6 @@
 }
 html {
   overflow: hidden;
-}
-
-.leaf {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 100% 0;
-  background-color: green;
 }
 
 body {
@@ -154,79 +147,13 @@ h1:hover {
   border-radius: 40px;
 }
 
-.emoji {
-  font-size: var(--emoji-size);
+.flower {
+  margin: 40px;
+  height: var(--emoji-size);
+  width: var(--emoji-size);
   transition: 1s;
 }
 
-.emoji:hover {
+.flower:hover {
   transform: rotate(180deg);
-}
-
-/* Create a full screen overlay */
-.overlay {
-  height: 100%;
-  width: 100%;
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0, 0, 0);
-  /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black with opacity */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  transition: 0.5s;
-  /* 0.5 second fade in effect */
-}
-
-/* The loading content */
-.overlay-content {
-  position: relative;
-  top: 50%;
-  /* Position the content at the middle of the page */
-  width: 100%;
-  /* Full width */
-  text-align: center;
-  /* Centered text/links */
-  margin-top: 30px;
-  /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* Add a spin animation to the loader */
-.loader {
-  border: 16px solid var(--on-background-color);
-  border-radius: 50%;
-  border-top: 16px solid var(--primary-color);
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
