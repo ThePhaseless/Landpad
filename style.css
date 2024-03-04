@@ -8,7 +8,7 @@
   --background-color: #e9f5db;
   --on-background-color: #cfe1b9;
   --container-border-color: #b5c99a;
-  --text-color: #3a442c;
+  --text-color: rgb(75, 100, 39);
   --padding-small: 2vw;
   --padding-large: min(5vw);
 }
