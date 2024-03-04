@@ -24,8 +24,12 @@
 }
 
 * {
+  font-family: "Monsterrat", sans-serif;
+  font-style: normal;
   user-select: none;
   text-decoration: none !important;
+  width: fit-content;
+  height: min-content;
 }
 html {
   overflow: hidden;
@@ -37,11 +41,6 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--background-color);
-}
-
-#content {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -56,6 +55,7 @@ body {
 .row {
   display: flex;
   align-items: center;
+  flex-direction: row !important;
 }
 
 .column {
@@ -71,6 +71,15 @@ body {
   border-radius: min(3vh, 3vw);
 }
 
+.space-around {
+  justify-content: space-around !important;
+}
+
+.icon {
+  font-size: var(--icon-size);
+  padding-bottom: 2vh;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -78,9 +87,9 @@ body {
 }
 
 .title {
-  height: min-content;
-  width: 75%;
   justify-content: space-evenly;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 h1 {
@@ -95,12 +104,12 @@ h1:hover {
   color: var(--secondary-color) !important;
 }
 
-.apps {
+.app-container {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 4vw;
   align-items: center;
-  width: 90%;
 }
 
 .app {
@@ -111,7 +120,6 @@ h1:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 12vh;
   transition: 0.3s;
   border-radius: 20px;
 }
@@ -128,12 +136,9 @@ h1:hover {
 }
 
 .app div {
-  font-family: "Monsterrat", sans-serif;
-  font-style: normal;
   text-align: center;
   font-size: var(--text-size);
   line-height: 1;
-  padding-bottom: 1vh;
 }
 
 .spacer {

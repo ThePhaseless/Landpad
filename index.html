@@ -13,67 +13,58 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" type="image/x-icon" href="./flower.png" />
+    <link rel="icon" type="image/x-icon" href="/flower.png" />
     <meta charset="utf-8" lang="en" name="darkreader-lock" />
     <meta
       name="description"
       content="A website that contains a various self-hosted services. Protected by Cloudflare."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nerine</title>
   </head>
 
   <body>
-    <div id="myOverlay" class="overlay">
-      <div class="overlay-content">
-        <div class="loader"></div>
-      </div>
+    <div class="title border row container">
+      <h1 class="josefin-sans">Nerine</h1>
+      <img src="/flower.png" alt="Flower Icon" class="flower" />
     </div>
-    <script src="loading.js"></script>
 
-    <div id="content">
-      <div class="title border row container">
-        <h1 class="josefin-sans">Nerine</h1>
-        <img src="flower.png" alt="Flower Icon" class="flower" />
+    <div class="row app-container">
+      <div class="border row">
+        <a class="app" href="https://watch.nerine.dev">
+          <span class="material-symbols-rounded">tv</span>
+          <div>Watch</div>
+        </a>
+        <div class="divider"></div>
+        <a class="app" href="https://add.nerine.dev">
+          <span class="material-symbols-rounded">library_add</span>
+          <div>Add</div>
+        </a>
+        <div class="divider"></div>
+        <a class="app" href="https://auth.nerine.dev">
+          <span class="material-symbols-rounded">manage_accounts</span>
+          <div>Account</div>
+        </a>
       </div>
-
-      <div class="row apps">
-        <div class="border row">
-          <a class="app" href="https://watch.nerine.dev">
-            <span class="material-symbols-rounded">tv</span>
-            <div>Watch</div>
-          </a>
-          <div class="divider"></div>
-          <a class="app" href="https://add.nerine.dev">
-            <span class="material-symbols-rounded">library_add</span>
-            <div>Add</div>
-          </a>
-          <div class="divider"></div>
-          <a class="app" href="https://auth.nerine.dev">
-            <span class="material-symbols-rounded">manage_accounts</span>
-            <div>Account</div>
+      <div class="row" style="gap: 4vw">
+        <div class="border">
+          <a class="app center" href="https://homeassistant.nerine.dev">
+            <span class="material-symbols-rounded">home</span>
+            <div>Home</div>
           </a>
         </div>
-        <div class="row" style="gap: 4vw">
-          <div class="border">
-            <a class="app center" href="https://homeassistant.nerine.dev">
-              <span class="material-symbols-rounded">home</span>
-              <div>Home</div>
-            </a>
-          </div>
-          <div class="border">
-            <a class="app center" href="services/">
-              <span class="material-symbols-rounded">settings</span>
-              <div>Services</div>
-            </a>
-          </div>
-          <div class="accent border">
-            <a class="app center" href="contact/">
-              <span class="material-symbols-rounded">contacts</span>
-              <div>Contact</div>
-            </a>
-          </div>
+        <div class="border">
+          <a class="app center" href="services/">
+            <span class="material-symbols-rounded">settings</span>
+            <div>Services</div>
+          </a>
+        </div>
+        <div class="accent border">
+          <a class="app center" href="contact/">
+            <span class="material-symbols-rounded">contacts</span>
+            <div>Contact</div>
+          </a>
         </div>
       </div>
     </div>

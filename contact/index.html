@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="clipboard.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/ac1b18c231.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="/flower.png" />
+    <meta charset="utf-8" lang="en" name="darkreader-lock" />
+    <meta
+      name="description"
+      content="A website that contains a various self-hosted services. Protected by Cloudflare."
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+  </head>
+
+  <body class="space-around row">
+    <div class="title border">
+      <h1 class="josefin-sans">Contact</h1>
+    </div>
+    <div class="app-container">
+      <div class="border">
+        <a class="app" href="https://github.com/thephaseless">
+          <i class="fa-brands fa-github icon"></i>
+          <div>Github</div>
+        </a>
+      </div>
+      <div class="border">
+        <a class="app" href="mailto:thephaseless@gmail.com">
+          <i class="fa-regular fa-envelope icon"></i>
+          <div>Mail</div>
+        </a>
+    </div>
+    <div class="border popup">
+        <span class="popuptext" id="myPopup">Copied ThePhaseless username to clipboard!</span>
+      <a class="app discord" onclick="copyDiscordUsernameToClipboard()">
+        <i class="fa-brands fa-discord icon"></i>
+        <div>Discord</div>
+      </a>
+  </body>
+</html>
