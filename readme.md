@@ -28,6 +28,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 
 - [Font Awesome](https://fontawesome.com/) - Icons used in the project
+- [FlatIcon](https://www.flaticon.com/) - Icons used in the project by Freepik
 
 ## Contact
 
