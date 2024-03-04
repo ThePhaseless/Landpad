@@ -1,0 +1,232 @@
+:root {
+  --emoji-size: min(40vh, 20vw);
+  --title-size: min(15vh, 10vw);
+  --icon-size: min(7vh);
+  --text-size: clamp(15px, 2.5vh, 3vw);
+  --primary-color: #f090a1;
+  --background-color: #e9f5db;
+  --on-background-color: #cfe1b9;
+  --container-border-color: #b5c99a;
+  --text-color: #3a442c;
+  --padding-small: 2vw;
+  --padding-large: min(5vw);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #ea5f73;
+    --on-background-color: #556340;
+    --background-color: #39422b;
+    --container-border-color: #2b3221;
+    --text-color: #cfe1b9;
+  }
+}
+
+* {
+  user-select: none;
+  text-decoration: none !important;
+}
+html {
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100% 0;
+  background-color: green;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+#content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.border {
+  background-color: var(--on-background-color);
+  border: 5px solid var(--container-border-color);
+  border-radius: min(3vh, 3vw);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  height: min-content;
+  width: 75%;
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+  font-size: var(--title-size);
+  line-height: 1;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+h1:hover {
+  color: var(--primary-color) !important;
+}
+
+.apps {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4vw;
+  align-items: center;
+  width: 90%;
+}
+
+.app {
+  padding: var(--padding-small);
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 12vh;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.app:hover {
+  color: whitesmoke;
+  background-color: var(--primary-color);
+  margin: 20px;
+}
+
+.material-symbols-rounded {
+  padding: 1vh;
+  font-size: var(--icon-size);
+}
+
+.app div {
+  font-family: "Monsterrat", sans-serif;
+  font-style: normal;
+  text-align: center;
+  font-size: var(--text-size);
+  line-height: 1;
+  padding-bottom: 1vh;
+}
+
+.spacer {
+  width: 80px;
+}
+
+.divider {
+  height: 5vw;
+  width: 0.2vw;
+  background-color: var(--container-border-color);
+  border-radius: 40px;
+}
+
+.emoji {
+  font-size: var(--emoji-size);
+  transition: 1s;
+}
+
+.emoji:hover {
+  transform: rotate(180deg);
+}
+
+/* Create a full screen overlay */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black with opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second fade in effect */
+}
+
+/* The loading content */
+.overlay-content {
+  position: relative;
+  top: 50%;
+  /* Position the content at the middle of the page */
+  width: 100%;
+  /* Full width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* Add a spin animation to the loader */
+.loader {
+  border: 16px solid var(--on-background-color);
+  border-radius: 50%;
+  border-top: 16px solid var(--primary-color);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
