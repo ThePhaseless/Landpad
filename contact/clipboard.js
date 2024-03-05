@@ -5,7 +5,7 @@ function copyDiscordUsernameToClipboard() {
   var copyText = "ThePhaseless";
 
   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
+  navigator.clipboard.writeText(copyText);
 
   // Get the popup
   var popup = document.getElementById("myPopup");
